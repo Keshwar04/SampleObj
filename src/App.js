@@ -20,17 +20,14 @@ export default function App() {
       if (x == id) {
         let priceOfProducts = arr.map((e) => e);
         price = priceOfProducts[id - 1].price;
-        console.log(priceOfProducts);
       }
     }
-    console.log(price);
 
     setRes({
       inc: { ...res.inc, [id]: res.inc[id] + 1 },
       price: { ...res.price, [id]: res.price[id] + 1 * price }
     });
   };
-  console.log(res);
 
   return (
     <div className="App">
